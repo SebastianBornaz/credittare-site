@@ -1,196 +1,249 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Calculator rate - credittare</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<head>
+	<title>Calculator rate - credittare</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-				<!-- Wrapper -->
-					<div class="wrapper">
-						<div class="inner">
+<body class="is-preload">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo">credittare</a>
-									<nav>
-										<ul>
-											<li><a href="#menu">Menu</a></li>
-										</ul>
-									</nav>
-								</header>
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
 
-							<!-- Nav -->
-								<nav id="menu">
-									<ul class="links">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="generic.html">Produse</a></li>
-										<li><a href="elements.html">Servicii</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Sign Up</a></li>
-										<li><a href="#" class="button fit">Log In</a></li>
-									</ul>
-								</nav>
-						</div>
-					</div>
+		<!-- Wrapper -->
+		<div class="wrapper">
+			<div class="inner">
 
-				<!-- Wrapper -->
-					<div class="wrapper">
-						<div class="inner">
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">credittare</a>
+					<nav>
+						<ul>
+							<li>
+								<a href="#menu">Menu</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
 
-							<!-- Main -->
-							<section class="main">
-								<header class="major">
-									<h1>Calculator rate online</h1>
-								</header>
-								<div class="row gtr-200">
-									<!-- First Row-->
-									<div class="col-6 col-12-medium">
-										<form name="calc" method="POST" action="#" >
-											<div class="row gtr-uniform">
-												<div class="col-12">
-													<select name="tip-credit" id="tip-credit">
-														<option value="-">Alegeti tipul de credit</option>
-														<option value="ipotecar">Credit ipotecar</option>								
-														<option value="nevoi">Credit de nevoi personale</option>								
-														<option value="nevoi-ipoteca">Credit de nevoi personale cu ipoteca</option>								
-														<option value="constructii">Credit de constructii</option>								
-														<option value="auto">Credit auto</option>
-													</select>
-												</div>
-												<!-- Break -->
-												<div class="col-6 col-12-xsmall">
-													<input class="labels" type="text" name="label-perioada" value="Perioada (luni)" readonly>
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input id="period" type="text" name="perioada" maxlength="4">
-												</div>
-												<!-- Break -->
-												<div class="col-6 col-12-xsmall">
-													<input class="labels" type="text" name="label-dobanda" value="Dobanda" readonly>
-												</div>
-												<div class="col-6 col-12-xsmall input-icon input-icon-right">
-													<i>%</i>
-													<input id="dob" type="text" name="dobanda" maxlength="5" placeholder="0">
-												</div>
-												<!-- Break -->
-												<div class="col-6 col-12-xsmall">
-													<input class="labels" type="text" name="label-comision-lunar" value="Comision lunar" readonly>
-												</div>
-												<div class="col-6 col-12-xsmall input-icon input-icon-right">
-													<i>%</i>
-													<input id="comm" type="text" name="comision-lunar" placeholder="0">
-												</div>
-												<!-- Break -->
-												<div class="col-6 col-12-xsmall">
-													<input class="labels" type="text" name="label-suma-imprumutata" value="Suma imprumutata" readonly>
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input id="sum" type="text" name="suma-imprumutata">
-												</div>
-											</div>
-										</form>
+				<!-- Nav -->
+				<nav id="menu">
+					<ul class="links">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="generic.html">Produse</a>
+						</li>
+						<li>
+							<a href="elements.html">Servicii</a>
+						</li>
+					</ul>
+					<ul class="actions stacked">
+						<li>
+							<a href="#" class="button primary fit">Sign Up</a>
+						</li>
+						<li>
+							<a href="#" class="button fit">Log In</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 
-										<hr />
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall">
-												<input class="labels" type="text" name="label-rata-credit" value="Rata credit lunara" readonly>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<input id="ratalunara" type="text" name="rata-credit" value="">
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<input class="labels" type="text" name="label-cost-total" value="Cost total credit" readonly>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<input id="costtotal" type="text" name="cost-total" value="">
-											</div>
-										</div>
+		<!-- Wrapper -->
+		<div class="wrapper">
+			<div class="inner">
 
+				<!-- Main -->
+				<section class="main">
+					<header class="major">
+						<h1>Calculator rate online</h1>
+					</header>
+					<div class="row gtr-200">
+						<!-- First Row-->
+						<div class="col-6 col-12-medium">
+							<form name="calc" method="POST" action="#">
+								<div class="row gtr-uniform">
+									<div class="col-12">
+										<select name="tip-credit" id="tip-credit">
+											<option value="-">Alegeti tipul de credit</option>
+											<option value="ipotecar">Credit ipotecar</option>
+											<option value="nevoi">Credit de nevoi personale</option>
+											<option value="nevoi-ipoteca">Credit de nevoi personale cu ipoteca</option>
+											<option value="constructii">Credit de constructii</option>
+											<option value="auto">Credit auto</option>
+										</select>
 									</div>
-									<!-- Second Row-->
-									<div class="col-6 col-12-medium">
-										<span class="image fit"><img src="images/pic02.jpg"></span>
-										<ul class="alt">
-											<li>Datele cuprinse in prezentul scadentar sunt informative.</li>
-											<li>Costul total cuprinde valoarea totala a dobanzii si a comisionului lunar scadentate.</li>
-											<li>Suma estimativa ce poate fi obtinuta se poate stabili printr-un calcul financiar preliminar ce cuprinde informatiile detaliate privind
-											costurile aferente produsului de creditare, parte integranta din Anexa II privind informatiile standard la nivel european privind creditul pentru consumatori.</li>
-										</ul>
+									<!-- Break -->
+									<div class="col-6 col-12-xsmall">
+										<input class="labels" type="text" name="label-perioada" value="Perioada (luni)" readonly>
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input id="period" type="text" name="perioada" maxlength="4">
+									</div>
+									<!-- Break -->
+									<div class="col-6 col-12-xsmall">
+										<input class="labels" type="text" name="label-dobanda" value="Dobanda" readonly>
+									</div>
+									<div class="col-6 col-12-xsmall input-icon input-icon-right">
+										<i>%</i>
+										<input id="dob" type="text" name="dobanda" maxlength="5" placeholder="0">
+									</div>
+									<!-- Break -->
+									<div class="col-6 col-12-xsmall">
+										<input class="labels" type="text" name="label-comision-lunar" value="Comision lunar" readonly>
+									</div>
+									<div class="col-6 col-12-xsmall input-icon input-icon-right">
+										<i>%</i>
+										<input id="comm" type="text" name="comision-lunar" placeholder="0">
+									</div>
+									<!-- Break -->
+									<div class="col-6 col-12-xsmall">
+										<input class="labels" type="text" name="label-suma-imprumutata" value="Suma imprumutata" readonly>
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input id="sum" type="text" name="suma-imprumutata">
 									</div>
 								</div>
-							</section>
-						</div>
-					</div>
+							</form>
 
-				<!-- Wrapper -->
-					<div class="wrapper">
-						<div class="inner">
-
-							<!-- Footer -->
-							<footer id="footer">
-								<section class="links">
-									<div>
-										<h3>Persoane fizice</h3>
-										<ul class="plain">
-											<li><a style="cursor: pointer;">Credit de nevoi personale</a></li>
-											<li><a style="cursor: pointer;">Credit ipotecar</a></li>
-											<li><a style="cursor: pointer;">Credit imobiliar</a></li>
-											<li><a style="cursor: pointer;">Credit auto</a></li>
-										</ul>
-									</div>
-									<div>
-									  	<h3>Persoane juridice</h3>
-									  	<ul class="plain">
-										  	<li><a style="cursor: pointer;">Credit pentru investitii</a></li>
-										  	<li><a style="cursor: pointer;">Credit finantare activitate</a></li>
-										  	<li><a style="cursor: pointer;">Credit ipotecar / imobiliar</a></li>
-										  	<li><a style="cursor: pointer;">Overdraft</a></li>
-										  	<li><a style="cursor: pointer;">Lease back</a></li>
-									  	</ul>
-									</div>
-									<div>
-									 	 <h3>Calculator</h3>
-									 	 <ul class="plain">
-										 	<li><a href="calculator_rate.html" style="cursor: pointer;">Calculator rate credite</a></li>
-										 	<li><a style="cursor: pointer;">Calculator leasing</a></li>
-									 	 </ul>
-									</div>
-									<div>
-									  	<h3>Informatii utile</h3>
-									  	<ul class="plain">
-											<li><a style="cursor: pointer;">Produse</a></li>
-											<li><a style="cursor: pointer;">Despre noi</a></li>
-											<li><a style="cursor: pointer;">Contact</a></li>
-									  	</ul>
-									</div>
-								</section>
-									<ul class="contact-icons">
-										<li class="icon fa-home">Bd. Natiunile Unite, Nr. 1, Bl. 108A, Et. 1, Camera B1, Sector 5, Bucuresti</li>
-										<li class="icon fa-phone"><a href="#">(+40) 755 076 100</a></li>
-										<li class="icon fa-envelope-o"><a href="#">office@credittare.ro</a></li>
-									</ul>
-									<p class="copyright">&copy; credittare.ro. Toate drepturile rezervate.</p>
-							</footer>
+							<hr />
+							<div class="row gtr-uniform">
+								<div class="col-6 col-12-xsmall">
+									<input class="labels" type="text" name="label-rata-credit" value="Rata credit lunara" readonly>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input id="ratalunara" type="text" name="rata-credit" value="">
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input class="labels" type="text" name="label-cost-total" value="Cost total credit" readonly>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input id="costtotal" type="text" name="cost-total" value="">
+								</div>
+							</div>
 
 						</div>
+						<!-- Second Row-->
+						<div class="col-6 col-12-medium">
+							<span class="image fit">
+								<img src="images/pic02.jpg">
+							</span>
+							<ul class="alt">
+								<li>Datele cuprinse in prezentul scadentar sunt informative.</li>
+								<li>Costul total cuprinde valoarea totala a dobanzii si a comisionului lunar scadentate.</li>
+								<li>Suma estimativa ce poate fi obtinuta se poate stabili printr-un calcul financiar preliminar ce cuprinde informatiile
+									detaliate privind costurile aferente produsului de creditare, parte integranta din Anexa II privind informatiile
+									standard la nivel european privind creditul pentru consumatori.</li>
+							</ul>
+						</div>
 					</div>
+					<ul class="actions">
+						<li><a id="table-button" class="button primary">Tabel</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<!-- Wrapper -->
+		<div class="wrapper">
+			<div class="inner">
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="links">
+						<div>
+							<h3>Persoane fizice</h3>
+							<ul class="plain">
+								<li>
+									<a style="cursor: pointer;">Credit de nevoi personale</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Credit ipotecar</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Credit imobiliar</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Credit auto</a>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Persoane juridice</h3>
+							<ul class="plain">
+								<li>
+									<a style="cursor: pointer;">Credit pentru investitii</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Credit finantare activitate</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Credit ipotecar / imobiliar</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Overdraft</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Lease back</a>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Calculator</h3>
+							<ul class="plain">
+								<li>
+									<a href="calculator_rate.html" style="cursor: pointer;">Calculator rate credite</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Calculator leasing</a>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Informatii utile</h3>
+							<ul class="plain">
+								<li>
+									<a style="cursor: pointer;">Produse</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Despre noi</a>
+								</li>
+								<li>
+									<a style="cursor: pointer;">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<ul class="contact-icons">
+						<li class="icon fa-home">Bd. Natiunile Unite, Nr. 1, Bl. 108A, Et. 1, Camera B1, Sector 5, Bucuresti</li>
+						<li class="icon fa-phone">
+							<a href="#">(+40) 755 076 100</a>
+						</li>
+						<li class="icon fa-envelope-o">
+							<a href="#">office@credittare.ro</a>
+						</li>
+					</ul>
+					<p class="copyright">&copy; credittare.ro. Toate drepturile rezervate.</p>
+				</footer>
 
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/calculator.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/calculator.js"></script>
+
+</body>
+
 </html>
