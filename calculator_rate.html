@@ -42,14 +42,6 @@
 							<a href="elements.html">Servicii</a>
 						</li>
 					</ul>
-					<ul class="actions stacked">
-						<li>
-							<a href="#" class="button primary fit">Sign Up</a>
-						</li>
-						<li>
-							<a href="#" class="button fit">Log In</a>
-						</li>
-					</ul>
 				</nav>
 			</div>
 		</div>
@@ -143,7 +135,12 @@
 						</div>
 					</div>
 					<ul class="actions">
-						<li><a id="table-button" class="button primary">Genereaza tabel</a></li>
+						<li>
+							<a id="table-button" class="button primary">Genereaza tabel</a>
+						</li>
+						<li>
+							<a id="download-button" class="button icon fa-download">Descarca</a>
+						</li>
 					</ul>
 				</section>
 			</div>
@@ -240,10 +237,27 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/xlsx@0.13.3/dist/xlsx.full.min.js"></script>
+	<script type="text/javascript" src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/calculator.js"></script>
+	<script>
+		var wb = XLSX.utils.table_to_book(document.getElementById('tbl'), { sheet: "Sheet JS" });
+		var wbout = XLSX.write(wb, { bookType: 'xlsx', bookSST: true, type: 'binary' });
 
+		function s2ab(s) {
+			var buf = new ArrayBuffer(s.length);
+			var view = new Uint8Array(buf);
+			for (var i = 0; i < s.length; i++)
+				view[i] = s.charCodeAt(i) & 0xFF;
+			return buf;
+		}
+
+		$("#download-button").click(function () {
+			saveAs(new Blob([s2ab(wbout)], { type: "application/octet-stream" }), 'test.xlsx');
+		});
+	</script>
 </body>
 
 </html>

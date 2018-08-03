@@ -1,22 +1,26 @@
 function PMT(rate, period, sum) {
     return rate * sum * Math.pow((1 + rate), period) / (1 - Math.pow((1 + rate), period));
 }
+
 function roundUp(number, digits) {
     var factor = Math.pow(10, digits);
     return Math.ceil(number * factor) / factor;
 }
+
 function updateFields() {
     // variabile citite
     var period = document.getElementsByName('perioada')[0].value;
     var dob = document.getElementsByName('dobanda')[0].value;
     var comml = document.getElementsByName('comision-lunar')[0].value;
     var sum = document.getElementsByName('suma-imprumutata')[0].value;
+
     //formule matematice
     var rata = -Math.round(PMT(dob / 100 / 12, period, sum)*100)/100;
     var commt = comml/100 * sum;
     var d12 = dob/12;
     var cost_total = Math.ceil(rata*period - sum + comml*((sum - rata/d12)*(Math.pow(1 + d12, period) - 1)/d12 + rata*period/d12));
     var total_plata = sum + cost_total;
+
     //afisare
     if (period == null || period == 0 || dob == null || dob == 0 || sum == null || sum == 0) {
         document.getElementById('ratalunara').value = 0;
@@ -30,6 +34,7 @@ function updateFields() {
         document.getElementById('costtotal').value = cost_total;
         document.getElementById('costtotal').style.color = "rgba(46, 150, 46, 0.8)";
     }
+
     document.getElementById('commt').value = commt;
     document.getElementById('platatotal').value = total_plata;
 }
@@ -44,16 +49,19 @@ function generateTable() {
     var dob = document.getElementsByName('dobanda')[0].value;
     var comml = document.getElementsByName('comision-lunar')[0].value;
     var sum = document.getElementsByName('suma-imprumutata')[0].value;
+
     //formule matematice
     var rata = -Math.round(PMT(dob / 100 / 12, period, sum)*100)/100;
     var commt = comml/100 * sum;
     var d12 = dob/12;
     var cost_total = Math.ceil(rata*period - sum + comml*((sum - rata/d12)*(Math.pow(1 + d12, period) - 1)/d12 + rata*period/d12));
+    
     //table start
     var headers = ["#", "Sold credit initial", "Principal", "Dobanda", "Rata de credit", "Sold credit final", "Comision lunar", "Total de plata lunar"];
     var parentNode = document.getElementsByTagName('section')[0];
     var tbl = document.createElement('table');
     tbl.classList.add('alt');
+    tbl.id = "tbl";
     //table head
         var tableHead = document.createElement('thead');
         var tr = document.createElement('tr');
@@ -64,6 +72,7 @@ function generateTable() {
         }
         tableHead.appendChild(tr);
         tbl.appendChild(tableHead);
+
     //table content
         var tableBody = document.createElement('tbody');
         // first cycle is independent
@@ -74,6 +83,7 @@ function generateTable() {
         var E = roundUp(A - B, 2);
         var F = A * comml;
         var G = D + F;
+
         for (var i = 0; i < period; i++) {
             var tr = document.createElement('tr');
             // #
@@ -117,23 +127,15 @@ function generateTable() {
             var G = D + F;
             tableBody.appendChild(tr);
         }
+
     tbl.appendChild(tableBody);
     parentNode.appendChild(tbl);
-    tbl.style.display = "none";
-}
-
-generateTable();
-
-function showOrHide() {
-	var y = document.getElementsByClassName('alt')[1];
-	if (y.style.display === "none")
-  	    y.style.display = "block";
-    else
-  	    y.style.display = "none";
+    //  tbl.style.display = "none";
 }
 
 var x = document.getElementById('table-button');
-x.addEventListener('click', showOrHide);
+x.addEventListener('click', generateTable);
+x.addEventListener('click', function() {document.getElementById('download-button').style.visibility = "visible";})
 
 //calcul onkeyup
 document.getElementById("period").addEventListener('keyup', updateFields);
@@ -146,4 +148,3 @@ document.getElementById("period").addEventListener('input', restrictInput);
 document.getElementById("dob").addEventListener('input', restrictInput);
 document.getElementById("comm").addEventListener('input', restrictInput);
 document.getElementById("sum").addEventListener('input', restrictInput);
-
