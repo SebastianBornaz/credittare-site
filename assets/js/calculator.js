@@ -119,17 +119,17 @@ function generateTable() {
         }
     tbl.appendChild(tableBody);
     parentNode.appendChild(tbl);
-    tbl.style.visibility = "hidden";
+    tbl.style.display = "none";
 }
 
 generateTable();
 
 function showOrHide() {
 	var y = document.getElementsByClassName('alt')[1];
-	if (y.style.visibility == "hidden")
-  	y.style.visibility = "visible";
-  else if (x.style.visibility = "visible")
-  	y.style.visibility = "hidden";
+	if (y.style.display === "none")
+  	    y.style.display = "block";
+    else
+  	    y.style.display = "none";
 }
 
 var x = document.getElementById('table-button');
